@@ -1,0 +1,30 @@
+header {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.5rem;
+  background-color: var(--orange);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.input input {
+  width: 10rem;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 0.5rem;
+  transition: 0.5s;
+  color: var(--black);
+}
+
+.input input:focus {
+  width: 17rem;
+  outline: 2px solid var(--orange);
+  border: none;
+}
