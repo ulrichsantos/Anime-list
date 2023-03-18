@@ -1,13 +1,4 @@
 import styles from './Modal.module.css'
-import { useState } from 'react';
-import nodemailer from 'nodemailer';
-
-interface FormValues {
-  name: string
-  email: string
-  anime: string
-  releaseDate: string
-}
 
 interface ModalProps {
   isOpen: boolean
@@ -15,13 +6,6 @@ interface ModalProps {
 }
 
 export function Modal( {isOpen, onClose}: ModalProps ) {
-  const [formValue, setFormValue] = useState<FormValues>({
-    name: '',
-    email: '',
-    anime: '',
-    releaseDate: '',
-  })
-
   if (!isOpen) {
     return null
   }
