@@ -1,0 +1,32 @@
+:root {
+  --white: #fff;
+  --background: #1A1A1A;
+  --orange: #f47521;
+  --orange-100: #db7632;
+  --blue: #2abdbb;
+  --blue-200: #4f74c8;
+  --blue-300: #739dff;
+  --black: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  font-size: 1rem;
+}
+
+button {
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  color: var(--white);
+  border: none;
+}
