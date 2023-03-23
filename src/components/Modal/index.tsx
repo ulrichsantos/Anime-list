@@ -16,7 +16,7 @@ interface EmailData {
 }
 
 function sendEmail(data: EmailData) {
-  const apiKey = process.env.SENDGRID_API_KEY;
+  const apiKey = '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'
 
   if (!apiKey) {
     throw new Error('API key not found');
@@ -60,7 +60,7 @@ export function Modal( {isOpen, onClose}: ModalProps ) {
 
     const data: EmailData = {
       to: email,
-      from: process.env.FROM_EMAIL || 'default@email.com',
+      from: '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' || 'default@email.com',
       subject: 'Novo anime inscrito!',
       text: `
         Nome: ${name}
