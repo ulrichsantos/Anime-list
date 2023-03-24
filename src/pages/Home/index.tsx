@@ -29,7 +29,7 @@ export function Home() {
 
   function getAnime() {
     axios
-      .get(`https://api.jikan.moe/v4/anime`)
+      .get(`http://localhost:3000/animes`)
       .then((res) => {
         setAnimes(res.data.data)
         setFilteredAnimes(res.data.data)

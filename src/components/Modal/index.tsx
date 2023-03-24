@@ -1,6 +1,7 @@
 import styles from './Modal.module.css'
 import sgMail from '@sendgrid/mail'
 import { useState } from 'react'
+import axios from 'axios'
 
 
 interface ModalProps {
@@ -15,22 +16,17 @@ interface EmailData {
   text: string
 }
 
-function sendEmail(data: EmailData) {
-  const apiKey = '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'
-
-  if (!apiKey) {
-    throw new Error('API key not found');
-  }
-
-  sgMail.setApiKey(apiKey);
-
-  sgMail.send(data)
+function sendEmail(data: any) {
+  axios
+    .post("http://localhost:3000/alert", data, {
+      headers: {
+          'Content-Type': 'application/json'
+      }})
     .then(() => {
-      alert('Email enviado com sucesso');
+      alert("DEU CERTO")
+    }).catch((ex) => {
+      alert("Error" + ex)
     })
-    .catch((error) => {
-      alert('Error');
-    });
 }
 
 export function Modal( {isOpen, onClose}: ModalProps ) {
@@ -58,16 +54,8 @@ export function Modal( {isOpen, onClose}: ModalProps ) {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const data: EmailData = {
-      to: email,
-      from: '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' || 'default@email.com',
-      subject: 'Novo anime inscrito!',
-      text: `
-        Nome: ${name}
-        Email: ${email}
-        Anime: ${anime}
-        Lançamento do próximo episódio: ${releaseDate}
-      `
+    const data: any = {
+      name, email, anime, releaseDate
     }
     sendEmail(data);
     
