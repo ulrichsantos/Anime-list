@@ -9,13 +9,6 @@ interface ModalProps {
   onClose: () => void
 }
 
-interface EmailData {
-  to: string
-  from: string
-  subject: string
-  text: string
-}
-
 function sendEmail(data: any) {
   axios
     .post("http://localhost:3000/alert", data, {
