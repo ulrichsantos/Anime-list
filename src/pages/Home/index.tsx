@@ -37,14 +37,13 @@ export function Home() {
       .catch((error) => error)
   }
 
-  function filterAnimes(filteredTitle: string) {  
-    if (filteredTitle === "") {
-      setFilteredAnimes(animes)
-    } else {
-      setFilteredAnimes(
-        animes.filter((anime) => anime.title.toLowerCase().includes(filteredTitle.toLowerCase()))
-      );
-    }
+  function filterAnimes(filteredTitle: string) {
+    axios
+      .get(`http://localhost:3000/animes/${filteredTitle}`)
+      .then((res) => {
+        setFilteredAnimes(res.data);
+      })
+      .catch((error) => error)
   }
 
   return (
