@@ -26,7 +26,7 @@ export function Modal( {isOpen, onClose}: ModalProps ) {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [anime, setAnime] = useState('')
-  const [releaseDate, setReleaseDate] = useState('')
+  const [dataReleased, setReleaseDate] = useState('')
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value)
@@ -48,7 +48,7 @@ export function Modal( {isOpen, onClose}: ModalProps ) {
     event.preventDefault();
 
     const data: any = {
-      name, email, anime, releaseDate
+      name, email, anime, dataReleased
     }
     sendEmail(data);
     
@@ -66,7 +66,7 @@ export function Modal( {isOpen, onClose}: ModalProps ) {
           Nome: <input type="text" value={name} onChange={handleNameChange} />
           Email: <input type="email" value={email} onChange={handleEmailChange}/>
           Anime: <input type="text" value={anime} onChange={handleAnimeChange} />
-          Lançamento do próximo episódio: <input type="date" value={releaseDate} onChange={handleReleaseDateChange}/>
+          Lançamento do próximo episódio: <input type="date" value={dataReleased} onChange={handleReleaseDateChange}/>
           <div className={styles.buttonModal}>
             <button type="submit">Adicionar</button>
             <button onClick={onClose}>Cancelar</button>

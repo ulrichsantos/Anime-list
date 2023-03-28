@@ -38,12 +38,16 @@ export function Home() {
   }
 
   function filterAnimes(filteredTitle: string) {
-    axios
-      .get(`http://localhost:3000/animes/${filteredTitle}`)
-      .then((res) => {
-        setFilteredAnimes(res.data);
-      })
-      .catch((error) => error)
+    if (filteredTitle === '') {
+      setFilteredAnimes(animes);
+    } else {
+      axios
+        .get(`http://localhost:3000/animes/${filteredTitle}`)
+        .then((res) => {
+          setFilteredAnimes(res.data);
+        })
+        .catch((error) => error)
+    }
   }
 
   return (
