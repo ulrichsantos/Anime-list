@@ -4,10 +4,10 @@
 
 <h2> Sobre o projeto </h2>
 
-Sempre fui fã da cultura oriental e apaixonado por Animes desde criança, entretanto sempre tive um problema na hora de acompanhar os lançamentos, que
-ocorrem uma vez por semana. Como sempre acompanhei diversos deles ao mesmo tempo, eu sempre esquecia de assistir algum, então dessa forma criei uma 
-aplicação web onde eu consigo deixar listados os animes que estou vendo e ainda mandar um lembrete para o meu e-mail com o nome do anime e o dia que 
-ele será lançado para que eu nunca esqueça de acompanhar todos!
+Sempre fui fã da cultura oriental e apaixonado por Animes desde criança, entretanto tenho dificuldade em acompanhar os lançamentos dos novos episódios que
+acontecem uma vez por semana, chego a estar assistindo 10 animes novos por temporada e isso faz com que eu me esqueça de alguns! Diante desse problema criei uma
+aplicação web onde listo os animes que estou vendo e através de um formulário posso enviar um e-mail como lembrete com o nome do anime o dia que ele será lançado
+para não esquecer de nenhum.
 
 <h2> Funcionalidades </h2>
 
@@ -49,11 +49,13 @@ montados do zero.</p>
 
 <h2> Como executar o projeto </h2>
 
-<li>#Backend</li>
+<li>Backend</li>
 Baixe o arquivo [Anime-List-Server](https://github.com/ulrichsantos/Server-Anime-List) que está no meu repositório, será necessário criar uma conta
 no SendGrid para ter acesso a uma chave API na qual será responsável pelos envios do email de forma automática. A chave deve ser inserida na linha 31 entre os parentêses.
 Para executar o servidor basta rodar o comando node server.js no terminal.
 
 ![image](https://user-images.githubusercontent.com/102335999/228618417-829c4376-5c68-46d9-bd33-fe9a5567addd.png)
 
-
+<li>FrotnEnd</li>
+Para rodar essa parte, não se esqueça de rodar o comando npm install no terminal para instalar todas as libs e dependências necessárias, após isso só rodar no terminal
+novamente o comando npm run dev
