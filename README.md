@@ -56,6 +56,6 @@ Para executar o servidor basta rodar o comando node server.js no terminal.
 
 ![image](https://user-images.githubusercontent.com/102335999/228618417-829c4376-5c68-46d9-bd33-fe9a5567addd.png)
 
-<li>FrotnEnd</li>
+<li>Frontend</li>
 Para rodar essa parte, não se esqueça de rodar o comando npm install no terminal para instalar todas as libs e dependências necessárias, após isso só rodar no terminal
 novamente o comando npm run dev
